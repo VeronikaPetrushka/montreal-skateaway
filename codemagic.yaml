@@ -21,21 +21,21 @@ workflows:
       - name: Install CocoaPods dependencies
         script: |
           cd ios && pod install
-      - name: Set up provisioning profile settings
+      - name: Set up provisioning profile settings on  Xcode project
         script: |
           cd ios
           xcode-project use-profiles
       - name: Increment build number
         script: |
-          cd ios
+          #!/bin/sh
+          cd $CM_BUILD_DIR/ios
           LATEST_BUILD_NUMBER=$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID")
-          echo "Latest build: $LATEST_BUILD_NUMBER"
           agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
-          agvtool what-version
       - name: Set Info.plist values
         script: |
           PLIST=$CM_BUILD_DIR/ios/MontrealSkateaway/Info.plist
-          /usr/libexec/PlistBuddy -c "Set :ITSAppUsesNonExemptEncryption false" $PLIST
+          PLIST_BUDDY=/usr/libexec/PlistBuddy
+          $PLIST_BUDDY -c "Add :ITSAppUsesNonExemptEncryption bool false" $PLIST
       - name: Build ipa for distribution
         script: |
           xcode-project build-ipa \
