@@ -18,16 +18,13 @@ workflows:
         - name: Install node modules
           script: |
             npm install
-
         - name: Install CocoaPods dependencies
           script: |
             cd ios && pod install
-
         - name: Set up provisioning profile settings
           script: |
             cd ios
             xcode-project use-profiles
-
         - name: Increment build number
           script: |
             cd ios
@@ -35,18 +32,15 @@ workflows:
             echo "Latest build: $LATEST_BUILD_NUMBER"
             agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
             agvtool what-version
-
         - name: Set Info.plist values
           script: |
             PLIST=$CM_BUILD_DIR/ios/MontrealSkateaway/Info.plist
             /usr/libexec/PlistBuddy -c "Set :ITSAppUsesNonExemptEncryption false" $PLIST
-
         - name: Build ipa for distribution
           script: |
             xcode-project build-ipa \
               --workspace "$CM_BUILD_DIR/ios/$XCODE_WORKSPACE" \
               --scheme "$XCODE_SCHEME"
-
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
