@@ -25,6 +25,10 @@ const MontrealIceRinkHockey = () => {
         loadRecord();
     }, []);
 
+    useEffect(() => {
+        loadRecord();
+    }, [gameOver]);
+
     const loadRecord = async () => {
         try {
             const stored = await AsyncStorage.getItem('HOCKEY_RECORDS');
@@ -45,8 +49,8 @@ const MontrealIceRinkHockey = () => {
 
     const stickSize = 70;
     const movementWidth = width * 0.8;
-    const movementHeight = height * 0.4;
-    const startBottom = height * 0.34;
+    const movementHeight = height > 700 ? height * 0.4 : height * 0.45;
+    const startBottom = height > 700 ? height * 0.34 : height * 0.31;
     const movementAreaLeft = (Dimensions.get('window').width - movementWidth) / 2;
 
     const panResponder = PanResponder.create({
@@ -225,7 +229,7 @@ const MontrealIceRinkHockey = () => {
                     <ImageBackground source={require('../AppAssets/appDecor/hockeyBackground2.png')} style={{ flex: 1 }}>
                         <View style={{ width: '100%', height: '100%' }}>
 
-                            <View style={[styles.countContainer, {top: height * 0.08}]}>
+                            <View style={[styles.countContainer, {top: height > 700 ? height * 0.08 : height * 0.06}]}>
                                 <Text style={[styles.count, {color: '#e38400'}]}>{formatTime(time)}</Text>
                             </View>
 
@@ -279,7 +283,7 @@ const MontrealIceRinkHockey = () => {
                                 />
                             </View>
 
-                            <View style={[styles.countContainer, {bottom: height * 0.08}]}>
+                            <View style={[styles.countContainer, {bottom: height > 700 ? height * 0.08 : height * 0.06}]}>
                                 <Text style={[styles.count, {color: '#8b1e00'}]}>{score}</Text>
                             </View>
 
@@ -290,7 +294,7 @@ const MontrealIceRinkHockey = () => {
                         <View style={{ width: '100%', height: '100%', alignItems: 'center' }}>
                             <TouchableOpacity
                                 onPress={() => setPlayHockey(true)}
-                                style={{ width: '100%', position: 'absolute', bottom: height * 0.14, alignSelf: 'center' }}
+                                style={{ width: '100%', position: 'absolute', bottom: height > 700 ? height * 0.14 : height * 0.18, alignSelf: 'center' }}
                             >
                                 <Image source={require('../AppAssets/appDecor/startBtn.png')} style={styles.startBtn} />
                             </TouchableOpacity>
@@ -391,7 +395,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         alignItems: 'center',
         paddingVertical: 60,
-        paddingHorizontal: 43,
+        paddingHorizontal: 40,
     },
 
     backBtn: {

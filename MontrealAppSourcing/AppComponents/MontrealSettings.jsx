@@ -38,7 +38,7 @@ const MontrealSettings = () => {
 
             <View style={styles.btnContainer}>
                 <Text style={styles.btnText}>PRIVACY & SECURITY</Text>
-                <TouchableOpacity onPress={() => Linking.openURL('https://www.montrealskateaway.com')}>
+                <TouchableOpacity onPress={() => Linking.openURL('https://www.termsfeed.com/live/92780cba-f5f4-4436-9cac-f56c5d467eed')}>
                     <Image source={require('../AppAssets/appIcons/back.png')} style={styles.arrowBtn} />
                 </TouchableOpacity>
             </View>
