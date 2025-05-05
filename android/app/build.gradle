@@ -79,7 +79,7 @@ android {
 
     namespace "com.montrealskateaway"
     defaultConfig {
-        applicationId "com.montrealskateaway"
+        applicationId "com.montreal.skateaway"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
