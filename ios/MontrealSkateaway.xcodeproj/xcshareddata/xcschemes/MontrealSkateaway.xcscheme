@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "MontrealSkateway.app"
-               BlueprintName = "MontrealSkateway"
-               ReferencedContainer = "container:MontrealSkateway.xcodeproj">
+               BuildableName = "MontrealSkateaway.app"
+               BlueprintName = "MontrealSkateaway"
+               ReferencedContainer = "container:MontrealSkateaway.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "MontrealSkatewayTests.xctest"
-               BlueprintName = "MontrealSkatewayTests"
-               ReferencedContainer = "container:MontrealSkateway.xcodeproj">
+               BuildableName = "MontrealSkateawayTests.xctest"
+               BlueprintName = "MontrealSkateawayTests"
+               ReferencedContainer = "container:MontrealSkateaway.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "MontrealSkateway.app"
-            BlueprintName = "MontrealSkateway"
-            ReferencedContainer = "container:MontrealSkateway.xcodeproj">
+            BuildableName = "MontrealSkateaway.app"
+            BlueprintName = "MontrealSkateaway"
+            ReferencedContainer = "container:MontrealSkateaway.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "MontrealSkateway.app"
-            BlueprintName = "MontrealSkateway"
-            ReferencedContainer = "container:MontrealSkateway.xcodeproj">
+            BuildableName = "MontrealSkateaway.app"
+            BlueprintName = "MontrealSkateaway"
+            ReferencedContainer = "container:MontrealSkateaway.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
