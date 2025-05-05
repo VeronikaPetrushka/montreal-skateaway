@@ -1,6 +1,6 @@
 {
-  "name": "MontrealSkateaway",
-  "version": "0.0.1",
+  "name": "montrealskateway",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -23,7 +23,8 @@
     "react-native-rename": "^3.2.16",
     "react-native-safe-area-context": "^5.4.0",
     "react-native-screens": "^4.10.0",
-    "react-native-svg": "^15.11.2"
+    "react-native-svg": "^15.11.2",
+    "react-native-version": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
