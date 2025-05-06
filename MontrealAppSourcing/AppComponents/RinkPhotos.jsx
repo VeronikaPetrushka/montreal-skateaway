@@ -98,7 +98,7 @@ const MontrealRinkDetails = ({ rink }) => {
             </ScrollView>
             
             <TouchableOpacity style={styles.viewPhotosBtn} onPress={uploadRinkPhotos}>
-                <Text style={[styles.rinkNameDetails, {fontSize: '16'}]}>UPLOAD</Text>
+                <Text style={[styles.rinkNameDetails, {fontSize: 16}]}>UPLOAD</Text>
             </TouchableOpacity>
 
             {showDeleteModal && (
